@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+html,
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: var(--themeBlack);
+  background: var(--background-color);
+  overflow-x:hidden;
+}
+
+:root{
+  --themeRed: #F54748;
+  --themeBlack: #2E2E2E;
+  --pink: #FDECEC;
+  --gray: #828282;
+  --shadow: -4px 12px 20px -2px rgba(0, 0, 0, 0.19);
+  --background-color:  linear-gradient(180deg, rgba(219, 230, 251, 0.85) 0%, rgba(255, 255, 255, 0) 30rem);
+  --cartBack : rgba(255, 255, 255, 0.38);
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(188, 203, 239);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #5596ec;
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  transition: all 300ms ease;
+
+}
+
+@layer components {
+  .btn {
+    width: max-content;
+    padding: 1rem;
+    border-radius: 4rem;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background-color: #99BFF2;
+  }
+  
+  .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .imageWrapper {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .selected {
+    background-color: #99BFF2;
+    color: white;
+    cursor: pointer;
+  }
+
+  .formText {
+    width: 100%;
+    outline: none;
+    padding: 1rem;
+    border: 2px solid rgb(213,213,213);
+    border-radius: 1rem;
+  }
+
+  .status {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 3rem;
+    position: relative;
+    align-items: center;
+  }
+  .status>* {
+    fill: #99BFF2;
+  }
+
+  .paymentDeliveryOnline {
+    width: max-content;
+    background-color: blue;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 9999px;
+    color: white;
+  }
+}
